@@ -2,7 +2,7 @@ group 'com.fluttercandies.flutter_image_compress'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.8.20'
+    ext.kotlin_version = '1.7.22'
     repositories {
         google()
         mavenCentral()
@@ -28,7 +28,7 @@ android {
         namespace 'com.fluttercandies.flutter_image_compress'
     }
 
-    compileSdkVersion 31
+    compileSdkVersion 33
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
@@ -39,14 +39,13 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    kotlinOptions {
-        jvmTarget = '11'
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
-    compileOptions {
-        // Sets Java compatibility to Java 11
-        sourceCompatibility JavaVersion.VERSION_11
-        targetCompatibility JavaVersion.VERSION_11
+    kotlinOptions {
+        jvmTarget = '1.8'
     }
 }
 
